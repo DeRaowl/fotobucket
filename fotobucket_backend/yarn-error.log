@@ -1,0 +1,63 @@
+Arguments: 
+  C:\Program Files\js\node.exe C:\Users\RahulM\AppData\Roaming\npm\node_modules\@sanity\cli\vendor\yarn install --json --non-interactive --ignore-engines --network-timeout 60000 --registry https://registry.npmjs.org
+
+PATH: 
+  C:\Python39\Scripts\;C:\Python39\;C:\app\client\Rahul\product\12.1.0\client_1\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\PuTTY\;C:\Program Files\Git\cmd;C:\Program Files\js\;C:\ProgramData\chocolatey\bin;C:\Users\RahulM\AppData\Local\Microsoft\WindowsApps;C:\Users\RahulM\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\RahulM\AppData\Local\GitHubDesktop\bin;C:\Users\RahulM\AppData\Roaming\npm
+
+Yarn version: 
+  1.22.17
+
+Node version: 
+  14.17.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.npmjs.org/date-fns/-/date-fns-2.28.0.tgz: ESOCKETTIMEDOUT
+      at ClientRequest.<anonymous> (C:\Users\RahulM\AppData\Roaming\npm\node_modules\@sanity\cli\vendor\yarn:135945:19)
+      at Object.onceWrapper (events.js:482:28)
+      at ClientRequest.emit (events.js:376:20)
+      at TLSSocket.emitRequestTimeout (_http_client.js:790:9)
+      at Object.onceWrapper (events.js:482:28)
+      at TLSSocket.emit (events.js:388:22)
+      at TLSSocket.Socket._onTimeout (net.js:483:8)
+      at listOnTimeout (internal/timers.js:555:17)
+      at processTimers (internal/timers.js:498:7)
+
+npm manifest: 
+  {
+    "name": "fotobucket",
+    "private": true,
+    "version": "1.0.0",
+    "description": "",
+    "main": "package.json",
+    "author": "Raowl <rahulreddy93m@gmail.com>",
+    "license": "UNLICENSED",
+    "scripts": {
+      "start": "sanity start",
+      "build": "sanity build"
+    },
+    "keywords": [
+      "sanity"
+    ],
+    "dependencies": {
+      "@sanity/base": "^2.24.1",
+      "@sanity/core": "^2.24.0",
+      "@sanity/default-layout": "^2.24.1",
+      "@sanity/default-login": "^2.24.1",
+      "@sanity/desk-tool": "^2.24.1",
+      "@sanity/vision": "^2.24.1",
+      "prop-types": "^15.7",
+      "react": "^17.0",
+      "react-dom": "^17.0",
+      "styled-components": "^5.2.0"
+    },
+    "devDependencies": {}
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
