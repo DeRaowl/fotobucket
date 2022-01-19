@@ -5,10 +5,25 @@ import { FcGoogle } from "react-icons/fc";
 import shareVideo from "../assets/share.mp4";
 import { FcCamera } from "react-icons/fc";
 
+import { client } from "../client";
+
 function Login() {
+  const navigate = useNavigate();
   const responseGoogle = (response) => {
     localStorage.setItem("user", JSON.stringify(response.profileObj));
     const { name, googleId, imageUrl } = response.profileObj;
+
+    // Sanity Doc to Strore user info
+    const doc = {
+      _id: googleId,
+      _type: "user",
+      userName: name,
+      image: imageUrl,
+    };
+
+    client.createIfNotExists(doc).then(() => {
+      navigate("/", { replace: true });
+    });
   };
   return (
     <div className="flex justify-start items-center flex-col h-screen">
@@ -26,7 +41,7 @@ function Login() {
           <div className="p-5 flex items-center justify-center flex-col">
             <div className="flex items-center justify-center mb-5">
               <FcCamera className="text-6xl m-1" />
-              <h1 className="text-3xl text-white from-neutral-200 font-mono">
+              <h1 className="text-3xl text-purple-400 from-neutral-200 font-mono">
                 Fotobucket
               </h1>
             </div>
